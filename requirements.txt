@@ -3,3 +3,8 @@ firebase-admin>=6.0
 cloudinary>=1.33
 werkzeug>=2.3
 gunicorn>=20.1
+cloudinary
+firebase-admin
+Flask
+gunicorn
+werkzeug
