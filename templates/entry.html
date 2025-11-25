@@ -58,12 +58,22 @@
     button:hover {
       background-color: #0056b3;
     }
+
+    .management-plans {
+      margin-top: 15px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
 
   <form action="/submit-business" method="POST" enctype="multipart/form-data">
     <h2>Submit Your Business Info</h2>
+
+    <!-- Black Friday Notice -->
+    <p style="background:#fffae6;padding:10px;border-radius:6px;border:1px solid #f1e2a3;">
+      🎉 <strong>Black Friday Deal:</strong> 20% off all pricing — discount applies to the first <strong>5 months</strong> of management plans! 🎉
+    </p>
 
     <label for="businessName">Business Name *</label>
     <input type="text" id="businessName" name="businessName" required>
@@ -84,18 +94,22 @@
     <textarea id="notes" name="notes" rows="3"></textarea>
 
     <label for="mediaUpload">Upload Images Less than 10MB to Feature (IMAGES ONLY)</label>
-    <input type="file" id="mediaUpload" name="mediaUpload" multiple accept="image/*,video/*">
+    <input type="file" id="mediaUpload" name="mediaUpload" multiple accept="image/*">
 
     <h3>Select a Plan</h3>
     <div class="management-plans">
-      
-        <input type="radio" name="managementPlan" value="Advanced Management" required>
-        $100 one-time fee + Advanced Management - $50/month (frequent updates like photo swaps, menu updates, hosting + domain)
-      <br>
-        <input type="radio" name="managementPlan" value="Basic Management">
-        $100 one-time fee + Basic Management - $30/month (hosting + basic updates)
-    </div>
 
+      <input type="radio" name="managementPlan" value="Advanced Management" required>
+      $80 one-time fee + Advanced Management – <strong>$40/month (first 5 months)</strong>,
+      then returns to <strong>$50/month</strong><br>
+      (frequent updates like photo swaps, menu updates, hosting + domain)
+      <br><br>
+
+      <input type="radio" name="managementPlan" value="Basic Management">
+      $80 one-time fee + Basic Management – <strong>$24/month (first 5 months)</strong>,
+      then returns to <strong>$30/month</strong><br>
+      (hosting + basic updates)
+    </div>
 
     <button type="submit">Submit</button>
   </form>
